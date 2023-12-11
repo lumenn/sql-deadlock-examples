@@ -1,0 +1,16 @@
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+
+BEGIN TRANSACTION
+    SELECT
+        SUM(Cena)
+    FROM
+        Wycieczki
+-- STEP 1 RUN ABOVE
+
+    INSERT INTO 
+        Bilety 
+    VALUES
+        (2, 'Honolulu', 1, 2000);
+-- STEP 3 RUN BETWEEN 1 AND 3
+
+COMMIT TRANSACTION

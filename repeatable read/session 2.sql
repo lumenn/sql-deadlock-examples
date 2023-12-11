@@ -1,0 +1,16 @@
+SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+
+BEGIN TRANSACTION T2
+    SELECT
+        SUM(Cena)
+    FROM
+        Bilety
+-- STEP 2 RUN ABOVE
+
+    UPDATE Wycieczki
+        SET cena = cena * 2
+    WHERE
+        kraj = 'Bangkok'
+-- STEP 4 RUN BETWEEN 2 AND 4
+
+COMMIT TRANSACTION T2
