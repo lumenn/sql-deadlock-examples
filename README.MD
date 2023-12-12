@@ -2,9 +2,10 @@
 This repostiory contains examples which might be used to show/explain why and when deadlocks happen in MSSQL.
 
 # How to
-1. Open two different SQL sessions.
-2. In each session open one file.
-3. Run SQL commands according to comments.
+1. Create example tables using ddl-script.sql
+2. Open two different SQL sessions.
+3. In each session open one file.
+4. Run SQL commands according to comments.
 
 For example - running Read Commited should look like:
 
